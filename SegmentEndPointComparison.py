@@ -4,10 +4,10 @@ import ifcopenshell.ifcopenshell_wrapper as wrapper
 import ifcopenshell.geom
 import numpy as np
 
-model = ifcopenshell.open("F:\\LX2IFC\\FTIA_LandXML\\3C03_Geom_Kupittaa-Turku_patch2.ifc")
+model = ifcopenshell.open("D:\\LX2IFC\\FTIA_LandXML\\3C03_Geom_Kupittaa-Turku_patch2.ifc")
 
 alignment = model.by_type("IfcAlignment")[0]
-curve = ifcopenshell.api.alignment.get_curve(alignment)
+curve = ifcopenshell.api.alignment.get_basis_curve(alignment)
 print(curve)
 
 settings = ifcopenshell.geom.settings()
